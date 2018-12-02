@@ -1,0 +1,117 @@
+
+<!-- header.ejs -->
+
+
+<div class="container-fluid" style="background: #253136;">
+      <div class="row">
+        <div class="col-md-12" style="background: #253136;height: 100px;z-index: 9999;">
+          <img src="img/logoDone.png" style="margin-left:50px;margin-top:25px;width: 100px;z-index: 9999;float: left;" class="img-responsive">
+          <div class="headhead" style="">&nbsp;&nbsp;&nbsp;&nbsp; <span style="background: ;font-family: 'myfont' ;padding-left: 20px;">&nbsp;&nbsp; DIGITAL PLATFORM FOR CITIZEN SERVICES </span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+      <!-- Logo -->
+
+
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation" style="background: ;">
+        <!-- Sidebar toggle button-->
+      <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" style="">
+        <span class="sr-only">Toggle navigation</span>
+      </a> -->
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu" >
+        <ul class="nav navbar-nav" style="background: ;">
+          <!-- Messages: style can be found in dropdown.less-->
+          
+          <!-- /.messages-menu -->
+          <!-- Notifications Menu -->
+          
+          <!-- Tasks Menu -->
+
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="/img/logo-2.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs" style="text-transform: capitalize;"><%= username%></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header" style="background: #253136;">
+                <img src="/img/logo-2.png" class="img-circle" alt="User Image">
+
+                <p style="text-transform: uppercase;">
+                  <%= cnic%> <script type="text/javascript"></script>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/profile" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" style="padding-top: 106px !important;z-index: 999;">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" >
+
+      <!-- Sidebar user panel (optional) -->
+      <div style="background-color: #253136;height: 50px;margin-top: -6px;"></div>
+
+      <!-- search form (Optional) -->
+      
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree" style="" >
+
+        <li style="" class="">
+          <a href="#" class="sidebar-toggle cfix" data-toggle="push-menu" role="button" style="background: ;font-size:18px;padding: 0px;height: 40px;width: auto;line-height: 40px;text-align: right;padding-right:20px;display: block;">
+            <i class="fa fa-navicon" style="color:#253136 !important;"></i>
+          </a>
+        </li>
+        <!-- <li class="header" style="background-color: yellow;">HEADER</li> -->
+        <!-- Optionally, you can add icons to the links -->
+        <li class="active"><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Home</span></a></li>
+        <script type="text/javascript">
+          if(usertype == "1") {
+            document.write('<li class="treeview"><a href="#"><i class="fa fa-link"></i> <span>Land Records</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a><ul class="treeview-menu"> <li><a href="/" class="ftreecolor"> <i class="fa fa-caret-right"></i>Property Transfer Requests</a></li> <li><a href="/" class="ftreecolor"> <i class="fa fa-caret-right"></i> View Approved Requests </a></li>')
+          }
+          else if(usertype == "0") {
+            document.write("<li class='treeview'><a href='#'><i class='fa fa-edit'></i> <span>Land Records</span><span class='pull-right-container'><i class='fa fa-angle-left pull-right'></i></span></a><ul class='treeview-menu'><li><a href='/createtransferreq' class='ftreecolor'> <i class='fa fa-caret-right'></i> Create Transfer Request </a></li> <li><a href='/' class='ftreecolor'> <i class='fa fa-caret-right'></i> Submit Payment Proof </a></li></ul></li>");
+
+          }
+
+
+
+        </script>
+
+
+
+
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>

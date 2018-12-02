@@ -1,0 +1,340 @@
+@media(max-width: 580px) {
+      .limg {
+          width: 50% !important;
+
+      }
+      .lbox {
+        text-align: center;
+      }
+    }
+    .ltext {
+      font-family: 'Bitter', serif;
+      font-size: 40px;
+      line-height: 160px;
+      color:#fff;
+    }
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+  line-height: 32px;
+
+  }
+
+
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+/* Giving a background-color to the nav#wot container. */
+nav#wot { 
+  margin:0;
+  padding: 0;
+  background: linear-gradient(#a4de28, #7cae27);
+  z-index: 999;
+  word-wrap:break-word !important;
+  
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav#wot:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav#wot ul {
+  float: left;
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  }
+  
+/* Positioning the navigation items inline */
+nav#wot ul li {
+  margin: 0px;
+  display:inline-block;
+  float: left;
+  background: linear-gradient(#a4de28, #7cae27);
+  border-right:1px groove #c0ed90;
+  }
+
+/* Styling the links */
+nav#wot a {
+  display:block;
+  padding:10px 30px;  
+  color:#FFF;
+  font-size:14px;
+  text-decoration:none;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+
+nav#wot ul li ul li:hover { }
+
+/* Background color change on Hover */
+nav#wot a:hover { 
+  border-bottom:5px solid #4f006a;
+  color: #4f006a;
+}
+
+.active {
+  border-bottom:5px solid #4f006a;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav#wot ul ul {
+  display: none;
+  position: absolute; 
+  /* has to be the same number as the "line-height" of "nav#wot a" */
+  top: 50px; 
+}
+  
+/* Display Dropdowns on Hover */
+nav#wot ul li:hover > ul {
+  display:inherit;
+}
+  
+/* Fisrt Tier Dropdown */
+nav#wot ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers 
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav#wot ul ul ul li {
+  position: relative;
+  top:-60px;
+  /* has to be the same number as the "width" of "nav#wot ul ul li" */ 
+  left:170px; 
+}
+
+  
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ''; }
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  nav#wot {
+    margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    background-color: #254441;
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:14px;
+    text-decoration:none;
+    border:none;
+  }
+
+  .toggle:hover {
+    background-color: #028c39;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  /* Change menu item's width to 100% */
+  nav#wot ul li {
+    display: block;
+    width: 100%;
+    }
+
+  nav#wot ul ul .toggle,
+  nav#wot ul ul a {
+    padding: 0 40px;
+  }
+
+  nav#wot ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav#wot a:hover,
+  nav#wot ul ul ul a {
+    background-color: #028c39;
+  }
+  
+  nav#wot ul li ul li .toggle,
+  nav#wot ul ul a,
+  nav#wot ul ul ul a{
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:14px; 
+  }
+  
+  
+  nav#wot ul li ul li .toggle,
+  nav#wot ul ul a {
+    background-color: #212121; 
+  }
+
+  /* Hide Dropdowns by Default */
+  nav#wot ul ul {
+    float: none;
+    position:static;
+    color: #ffffff;
+    z-index: 99999;
+    /* has to be the same number as the "line-height" of "nav#wot a" */
+  }
+    
+  /* Hide menus on hover */
+  nav#wot ul ul li:hover > ul,
+  nav#wot ul li:hover > ul {
+    display: none;
+  }
+    
+  /* Fisrt Tier Dropdown */
+  nav#wot ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav#wot ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav#wot ul ul li" */ 
+
+  }
+
+}
+
+@media all and (max-width : 330px) {
+
+  nav#wot ul li {
+    display:block;
+    width: 94%;
+  }
+
+}
+
+.footer-cont {
+
+}
+.footer-cont .ftb {
+  height: 80px;
+  line-height: 80px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+color: #fff;
+  background: linear-gradient(#7d01b2, #4f006a); 
+  text-align: center;
+}
+
+.fbox {
+  background: ;
+  border: 1px solid grey;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  height: 57px;
+  margin-bottom: 20px;
+  margin-top:20px;
+}
+
+.field {
+  width: 80%;
+  float: left;
+  height: 35px;
+  border: 0px;
+  outline: 0px;
+  background: #fff !important;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.fbtn {
+  background: #fff;
+  float: right;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 5px 5px 5px 5px;
+  opacity: 0.7;
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  line-height: 35px;
+  text-align: center;
+}
+.cl {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.temphead {
+  background: red;
+}
+.temphead h3 {
+  background: ;
+  float: left;
+  height: 35px;
+}
+
+.temphead .addf {
+  background: ;
+  height: 35px;
+  width: 35px;
+  float: right;
+  margin-right: 10px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.6;
+}
+.temphead .addf:hover {
+  opacity: 1;
+}
+
+.modal-dialog {
+    margin: 20vh auto 0px auto
+}
+
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
